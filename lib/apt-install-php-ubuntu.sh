@@ -2,7 +2,6 @@
 
 set -eo pipefail
 
-release=$(lsb_release -cs)
 version=$1
 
 # Suppression to startup failure
