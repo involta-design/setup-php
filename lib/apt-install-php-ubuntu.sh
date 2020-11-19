@@ -10,39 +10,12 @@ then
     systemctl disable php${version}-fpm
 fi
 
+add-apt-repository ppa:apt-fast/stable
+
 apt-get update
+apt-get install apt-fast
 
-if [ $version = '5.6' ]
-then
-    add-apt-repository ppa:ondrej/php
-    apt-get install -y build-essential debconf-utils unzip autogen autoconf libtool pkg-config
-
-    apt-get install -y \
-         php${version}-bcmath \
-         php${version}-bz2 \
-         php${version}-cgi \
-         php${version}-cli \
-         php${version}-common \
-         php${version}-curl \
-         php${version}-dba \
-         php${version}-enchant \
-         php${version}-gd \
-         php${version}-json \
-         php${version}-mbstring \
-         php${version}-mysql \
-         php${version}-odbc \
-         php${version}-opcache \
-         php${version}-pgsql \
-         php${version}-readline \
-         php${version}-soap \
-         php${version}-sqlite3 \
-         php${version}-xml \
-         php${version}-xmlrpc \
-         php${version}-xsl \
-         php${version}-zip
-fi
-
-apt-get install -y \
+apt-fast install -y \
      php${version}-dev \
      php${version}-phpdbg \
      php${version}-intl \
