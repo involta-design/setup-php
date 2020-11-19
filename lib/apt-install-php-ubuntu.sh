@@ -15,9 +15,9 @@ apt-get update
 if [ $version = '5.6' ]
 then
     add-apt-repository ppa:ondrej/php
-    apt-fast install -y build-essential debconf-utils unzip autogen autoconf libtool pkg-config
+    apt-get install -y build-essential debconf-utils unzip autogen autoconf libtool pkg-config
 
-    apt-fast install -y \
+    apt-get install -y \
          php${version}-bcmath \
          php${version}-bz2 \
          php${version}-cgi \
@@ -42,7 +42,7 @@ then
          php${version}-zip
 fi
 
-apt-fast install -y \
+apt-get install -y \
      php${version}-dev \
      php${version}-phpdbg \
      php${version}-intl \
