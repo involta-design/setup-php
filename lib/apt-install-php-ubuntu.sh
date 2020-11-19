@@ -10,6 +10,8 @@ then
     systemctl disable php${version}-fpm
 fi
 
+apt-get update
+
 apt-get install python-software-properties
 
 add-apt-repository ppa:apt-fast/stable
